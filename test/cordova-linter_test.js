@@ -1,7 +1,5 @@
 'use strict';
 
-var cordova_linter = require('../lib/cordova-linter.js');
-
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -21,16 +19,3 @@ var cordova_linter = require('../lib/cordova-linter.js');
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-
-exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(cordova_linter.awesome(), 'awesome', 'should be awesome.');
-    test.done();
-  },
-};
