@@ -35,4 +35,4 @@ _(Nothing yet)_
 
 ## License
 Copyright (c) 2013 Rich Trott
-Licensed under the MIT license.
+Licensed under the Apache 2.0 license.
