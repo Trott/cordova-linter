@@ -1,4 +1,4 @@
-# cordova-linter
+# cordova-linter [![Build Status][travis-ci-img]][travis-ci-url]
 
 Find common patterns in HTML, CSS, and JavaScript that are incompatible with Apache Cordova and PhoneGap.
 
