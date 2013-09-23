@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    jasmine_node: {
+    },
     nodeunit: {
       files: ['test/**/*_test.js'],
     },
@@ -38,6 +40,7 @@ module.exports = function(grunt) {
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');

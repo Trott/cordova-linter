@@ -32,7 +32,8 @@
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt": "~0.4.1",
-    "jasmine-node": "~1.11.0"
+    "jasmine-node": "~1.11.0",
+    "grunt-jasmine-node": "~0.1.0"
   },
   "keywords": [],
   "preferGlobal": "true",
