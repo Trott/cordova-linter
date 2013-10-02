@@ -18,7 +18,7 @@ It will report common issues such as:
 * As above but for resources loaded in JS
 * Find potentially problematic uses of load event when deviceReady is what is really needed.
 * [Issue #1](https://github.com/Trott/cordova-linter/issues/1): Flag techniques used to trigger deviceReady in the browser for testing if they should be removed from a production build. 
-* Detect CSS transitions that would benefit from hardware acceleration via the translate3d hack?
+* Detect CSS transitions that would benefit from hardware acceleration via the `translate3d` hack?
 * What else?
 
 ## Getting Started
