@@ -20,6 +20,8 @@ It will report common issues such as:
 * [Issue #1](https://github.com/Trott/cordova-linter/issues/1): Flag techniques used to trigger deviceReady in the browser for testing if they should be removed from a production build. 
 * Detect CSS transitions that would benefit from hardware acceleration via the `translate3d` hack?
 * Detect use of click event handlers without FastClick loaded
+* Detect failure to load `cordova.js`
+* Detect loading of `phonegap.js` instead of `cordova.js`
 * What else?
 
 ## Getting Started
