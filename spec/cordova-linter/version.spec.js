@@ -10,7 +10,7 @@ var CordovaLinter = require('../../lib/cordova-linter.js'),
     cordovaLinter;
 
 /*
- * Specification: phonegap.version()
+ * Specification: cordovaLinter.version()
  */
 
 describe('cordovaLinter.version()', function() {
