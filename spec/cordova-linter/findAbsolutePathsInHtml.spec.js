@@ -15,11 +15,19 @@ describe('cordovaLinter.findAbsolutePathsInHtml()', function() {
         cordovaLinter = new CordovaLinter();
     });
 
-    it('should return an empty object when there are no absolute links', function() {
+    it('should not flag a relative src path', function() {
         expect(cordovaLinter.findAbsolutePathsInHtml('<img src="./foo.png">').length).toEqual(0);
     });
 
-    it('should return a non-empty object when there are absolute links', function() {
+    it('should flag an absolute src path', function() {
         expect(cordovaLinter.findAbsolutePathsInHtml('<img src="/foo.png">').length).toEqual(1);
+    });
+
+    it ('should not flag a relative href path', function() {
+        expect(cordovaLinter.findAbsolutePathsInHtml('<a href="whatever.html">Whatever!</a>').length).toEqual(0);
+    });
+
+    it ('should flag an absolute href path', function() {
+        expect(cordovaLinter.findAbsolutePathsInHtml('<a href="/whatever.html">Whatever!</a>').length).toEqual(1);
     });
 });
