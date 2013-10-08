@@ -12,10 +12,10 @@ describe('$ cordova-linter [options] commands', function() {
         spyOn(process.stdout, 'write');
     });
 
-    // it('should support no arguments', function() {
-    //     var process = shell.exec(bin + '', { silent: true });
-    //     expect(process.output).toMatch('Usage:');
-    // });
+    it('should support no arguments', function() {
+        var process = shell.exec(bin + '', { silent: true });
+        expect(process.output).toMatch('Usage:');
+    });
 
     it('should support commands', function() {
         var process = shell.exec(bin + ' version', { silent: true });
