@@ -40,6 +40,7 @@
     "cordova-linter": "lib/cordova-linter.js"
   },
   "dependencies": {
-    "cheerio": "~0.12.3"
+    "cheerio": "~0.12.3",
+    "optimist": "~0.6.0"
   }
 }
