@@ -8,7 +8,7 @@ Find common patterns in HTML, CSS, and JavaScript that are incompatible with Apa
 Point this node CLI tool at your PhoneGap www directory. It will parse:
 
 * HTML (using jsdom? cheerio? htmlparser2?)
-* JS (using Esprima?)
+* JS (using Esprima? or maybe delegate to https://github.com/sindresorhus/grunt-eslint?)
 * CSS (using css-parse?)
 
 It will report common issues such as:
