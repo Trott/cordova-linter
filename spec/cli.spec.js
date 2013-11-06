@@ -26,4 +26,9 @@ describe('$ cordova-linter [options] commands', function() {
         var process = shell.exec(bin + ' --version', { silent: true });
         expect(process.output).toMatch(/^\w+\.\w+\.\w+/);
     });
+
+    it ('should support unknown commands', function() {
+        var process = shell.exec(bin + ' deep_sea_fangly_fish', { silent: true });
+        expect(process.output).toMatch('Usage:');
+    });
 });
