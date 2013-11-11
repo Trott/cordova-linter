@@ -15,7 +15,7 @@ describe('cordovaLinter.lint()', function() {
         cordovaLinter = new CordovaLinter();
     });
 
-    it('should return an empty string if linting an empty string', function() {
-        expect(cordovaLinter.lint('')).toEqual('');
+    it('should return success if linting an empty string', function() {
+        expect(cordovaLinter.lint('').status).toEqual(cordovaLinter.status.OK);
     });
 });

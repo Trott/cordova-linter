@@ -14,7 +14,7 @@ describe('$ cordova-linter [options] commands', function() {
 
     it('should support no arguments', function() {
         var process = shell.exec(bin + '', { silent: true });
-        expect(process.output).toMatch('Usage:');
+        expect(process.output).toMatch(/lint free/);
     });
 
     it('should support commands', function() {
