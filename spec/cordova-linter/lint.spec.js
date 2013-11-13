@@ -18,4 +18,8 @@ describe('cordovaLinter.lint()', function() {
     it('should return success if linting an empty string', function() {
         expect(cordovaLinter.lint('').status).toEqual(cordovaLinter.status.OK);
     });
+
+    it('should return a warning if linting a DOM with an absolute path', function() {
+        expect(cordovaLinter.lint('<a href="/foo/bar">Absolute Path!</a>').status).toEqual(cordovaLinter.status.WARNING);
+    });
 });
