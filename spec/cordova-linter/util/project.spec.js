@@ -17,13 +17,13 @@ describe('project', function() {
 
         describe('when index.html file does not exist', function() {
             it('should throw an error', function () {
-                expect(function () {project.readIndexHtml('.');}).toThrow(new Error("ENOENT, no such file or directory 'www/index.html'"));
+                expect(function () {project.readIndexHtml('.');}).toThrow(new Error("ENOENT, no such file or directory 'index.html'"));
             });
         });
 
         describe('when index.html file exists', function() {
             it('should return contents of index.html', function() {
-                expect(project.readIndexHtml('spec/fixture/project/Baz')).toMatch(/<title>Hello World<\/title>/);
+                expect(project.readIndexHtml('spec/fixture/project/Baz/www')).toMatch(/<title>Hello World<\/title>/);
             });
         });
     });

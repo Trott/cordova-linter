@@ -20,7 +20,7 @@ describe('$ cordova-linter [options] [projectPath]', function() {
     });
 
     it('should support a path argument', function() {
-        var projectPath = path.join('spec' + 'fixture', 'project', 'Baz');
+        var projectPath = path.join('spec' + 'fixture', 'project', 'Baz', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
         expect(myProcess.output.indexOf('Linting ' + projectPath)).toEqual(0);
     });
@@ -31,7 +31,7 @@ describe('$ cordova-linter [options] [projectPath]', function() {
     });
 
     it ('should report absolute paths', function() {
-        var projectPath = path.join('spec' , 'fixture', 'project', 'Bad');
+        var projectPath = path.join('spec' , 'fixture', 'project', 'Bad', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
         expect(myProcess.output).toMatch(/link tag: \/css\/index.css/);
     });
