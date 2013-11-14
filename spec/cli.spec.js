@@ -20,18 +20,19 @@ describe('$ cordova-linter [options] [projectPath]', function() {
     });
 
     it('should support a path argument', function() {
-        var projectPath = path.join('fixture', 'project', 'Baz');
-        var process = shell.exec(bin + ' ' + projectPath, { silent: true });
-        expect(process.output.indexOf('Linting ' + projectPath)).toEqual(0);
+        var projectPath = path.join('spec' + 'fixture', 'project', 'Baz');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output.indexOf('Linting ' + projectPath)).toEqual(0);
     });
 
     it('should support options', function() {
-        var process = shell.exec(bin + ' --version', { silent: true });
-        expect(process.output).toMatch(/^\w+\.\w+\.\w+/);
+        var myProcess = shell.exec(bin + ' --version', { silent: true });
+        expect(myProcess.output).toMatch(/^\w+\.\w+\.\w+/);
     });
 
-    it ('should support unknown commands', function() {
-        var process = shell.exec(bin + ' deep_sea_fangly_fish', { silent: true });
-        expect(process.output).toMatch('Linting deep_sea_fangly_fish');
+    it ('should report absolute paths', function() {
+        var projectPath = path.join('spec' , 'fixture', 'project', 'Bad');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output).toMatch(/link tag: \/css\/index.css/);
     });
 });
