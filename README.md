@@ -2,6 +2,12 @@
 
 Find common patterns in HTML, CSS, and JavaScript that are incompatible with Apache Cordova and PhoneGap.
 
+## Getting Started
+Install the tool with: `npm install -g cordova-linter`
+
+Then lint a project with: `cordova-linter path/to/your/project`
+
+Currently, all it does is check that you are not using absolute paths in `href` attributes.
 
 ## The Plan
 
@@ -23,9 +29,6 @@ It will report common issues such as:
 * Detect failure to load `cordova.js`
 * Detect loading of `phonegap.js` instead of `cordova.js`
 * What else?
-
-## Getting Started
-Install the tool with: `npm install -g cordova-linter`
 
 ## Documentation
 _(Coming soon)_
