@@ -1,7 +1,7 @@
 {
   "name": "cordova-linter",
   "description": "Find common patterns in HTML, CSS, and JavaScript that are incompatible with Apache Cordova and PhoneGap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/Trott/cordova-linter",
   "author": {
     "name": "Rich Trott",
