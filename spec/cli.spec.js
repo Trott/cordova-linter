@@ -7,7 +7,7 @@ var shell = require('shelljs'),
     path = require('path'),
     bin = 'node ' + path.resolve(path.join(__dirname, '..', 'bin', 'cordova-linter'));
 
-describe('$ cordova-linter [options] [projectPath]', function() {
+describe('$ cordova-linter [projectPath]', function() {
     beforeEach(function() {
         spyOn(process.stdout, 'write');
     });
@@ -34,5 +34,10 @@ describe('$ cordova-linter [options] [projectPath]', function() {
         var projectPath = path.join('spec' , 'fixture', 'project', 'Bad', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
         expect(myProcess.output).toMatch(/link tag: \/css\/index.css/);
+    });
+
+    it ('should exit with an error code', function () {
+        var myProcess = shell.exec(bin + ' non-existent_path', { silent: true });
+        expect(myProcess.code).not.toEqual(0);
     });
 });
