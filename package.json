@@ -33,7 +33,8 @@
     "grunt": "~0.4.1",
     "jasmine-node": "~1.11.0",
     "grunt-jasmine-node": "~0.1.0",
-    "grunt-conventional-changelog": "~1.0.0"
+    "grunt-conventional-changelog": "~1.0.0",
+    "shelljs": "~0.2.6"
   },
   "keywords": [],
   "preferGlobal": "true",
