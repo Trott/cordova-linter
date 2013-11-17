@@ -7,7 +7,7 @@ var shell = require('shelljs'),
     path = require('path'),
     bin = 'node ' + path.resolve(path.join(__dirname, '..', 'bin', 'cordova-linter'));
 
-describe('$ cordova-linter [projectPath]', function() {
+describe('$ cordova-linter [path]', function() {
     beforeEach(function() {
         spyOn(process.stdout, 'write');
     });
