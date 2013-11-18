@@ -30,10 +30,16 @@ describe('$ cordova-linter [path]', function() {
         expect(myProcess.output).toMatch(/^\w+\.\w+\.\w+/);
     });
 
-    it ('should report absolute paths', function() {
+    it ('should report absolute paths in href attributes', function() {
         var projectPath = path.join('spec' , 'fixture', 'project', 'Bad', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
-        expect(myProcess.output).toMatch(/link tag: \/css\/index.css/);
+        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of link tag: \/css\/index.css/);
+    });
+
+    it ('should report absolute paths in src attributes', function() {
+        var projectPath = path.join('spec', 'fixture', 'project', 'Bad', 'www');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of script tag: \/js\/index.js/);
     });
 
     it ('should exit with an error code', function () {
