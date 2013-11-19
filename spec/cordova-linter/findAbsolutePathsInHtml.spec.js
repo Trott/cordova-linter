@@ -23,11 +23,19 @@ describe('cordovaLinter.findAbsolutePathsInHtml()', function() {
         expect(cordovaLinter.findAbsolutePathsInHtml('<img src="/foo.png">').length).toEqual(1);
     });
 
+    it('should not flag a protocol-less src path', function () {
+        expect(cordovaLinter.findAbsolutePathsInHtml('<img src="//example.com/foo.png">').length).toEqual(0);
+    });
+
     it ('should not flag a relative href path', function() {
         expect(cordovaLinter.findAbsolutePathsInHtml('<a href="whatever.html">Whatever!</a>').length).toEqual(0);
     });
 
     it ('should flag an absolute href path', function() {
         expect(cordovaLinter.findAbsolutePathsInHtml('<a href="/whatever.html">Whatever!</a>').length).toEqual(1);
+    });
+
+    it ('should not flag a protocol-less href path', function() {
+        expect(cordovaLinter.findAbsolutePathsInHtml('<a href="//example.com/whatever.html">Whatever!</a>').length).toEqual(0);
     });
 });
