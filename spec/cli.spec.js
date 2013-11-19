@@ -33,13 +33,25 @@ describe('$ cordova-linter [path]', function() {
     it ('should report absolute paths in href attributes', function() {
         var projectPath = path.join('spec' , 'fixture', 'project', 'Bad', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
-        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of link tag: \/css\/index.css/);
+        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of link tag: \/css\/index\.css/);
     });
 
     it ('should report absolute paths in src attributes', function() {
         var projectPath = path.join('spec', 'fixture', 'project', 'Bad', 'www');
         var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
-        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of script tag: \/js\/index.js/);
+        expect(myProcess.output).toMatch(/Absolute path in src or href attribute of script tag: \/js\/index\.js/);
+    });
+
+    it ('should report protocol-less paths in href attributes', function() {
+        var projectPath = path.join('spec' , 'fixture', 'project', 'Bad', 'www');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output).toMatch(/Protocol-less path in src or href attribute of link tag: \/\/example\.com\/normalize\.css/);
+    });
+
+    it ('should report protocol-less paths in src attributes', function() {
+        var projectPath = path.join('spec', 'fixture', 'project', 'Bad', 'www');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output).toMatch(/Protocol-less path in src or href attribute of script tag: \/\/example\.com\/jquery\.js/);
     });
 
     it ('should exit with an error code', function () {
