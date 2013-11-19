@@ -10,7 +10,7 @@ Then lint a project with: `cordova-linter path/to/your/project`
 Currently, it will provide warnings for:
 
 * absolute paths in `src` or `href` attributes
-* protocol-less paths in `src` or `href` 
+* protocol-less paths in `src` or `href` attributes
 
 ## The Plan
 
