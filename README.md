@@ -7,7 +7,10 @@ Install the tool with: `npm install -g cordova-linter`
 
 Then lint a project with: `cordova-linter path/to/your/project`
 
-Currently, all it does is check that you are not using absolute paths in `href` attributes.
+Currently, it will provide warnings for:
+
+* absolute paths in `src` or `href` attributes
+* protocol-less paths in `src` or `href` 
 
 ## The Plan
 
