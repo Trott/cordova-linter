@@ -7,24 +7,15 @@ Install the tool with: `npm install -g cordova-linter`
 
 Then lint a project with: `cordova-linter path/to/your/project`
 
-Currently, it will provide warnings for:
+## Things The Linter Flags
 
 * absolute paths in `src` or `href` attributes
 * protocol-less paths in `src` or `href` attributes
 
-## The Plan
+## Upcoming
 
-Point this node CLI tool at your PhoneGap www directory. It will parse:
+I'll be doing these as I get a chance, but you should totally fork the project and implement these yourself, yo.
 
-* HTML (using jsdom? cheerio? htmlparser2?)
-* JS (using Esprima? maybe delegate to [ESLint](https://github.com/nzakas/eslint) with some plugins we write?)
-* CSS (using css-parse?)
-
-It will report common issues such as:
-
-* [Issue #6](https://github.com/Trott/cordova-linter/issues/6): HTML refs to local resources using absolute links where Cordova/PhoneGap requires relative links.
-* As above but for CSS URLs
-* As above but for resources loaded in JS
 * Find potentially problematic uses of load event when deviceReady is what is really needed.
 * [Issue #1](https://github.com/Trott/cordova-linter/issues/1): Flag techniques used to trigger deviceReady in the browser for testing if they should be removed from a production build. 
 * Detect CSS transitions that would benefit from hardware acceleration via the `translate3d` hack?
