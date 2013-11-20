@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "cheerio": "~0.12.3",
-    "optimist": "~0.6.0"
+    "optimist": "~0.6.0",
+    "esprima": "~1.0.4"
   }
 }
