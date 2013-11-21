@@ -15,8 +15,8 @@ describe('cordovaLinter.lint()', function() {
         cordovaLinter = new CordovaLinter();
     });
 
-    it('should return success if linting an empty string', function() {
-        expect(cordovaLinter.lint('').status).toEqual(cordovaLinter.status.OK);
+    it('should return success if no lint found', function() {
+        expect(cordovaLinter.lint('<script src="cordova.js"></script>').status).toEqual(cordovaLinter.status.OK);
     });
 
     it('should return a warning if linting a DOM with an absolute path', function() {
