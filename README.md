@@ -11,16 +11,16 @@ Then lint a project with: `cordova-linter path/to/your/project`
 
 * absolute paths in `src` or `href` attributes
 * protocol-less paths in `src` or `href` attributes
+* omission of a script tag loading cordova.js
 
 ## Upcoming
 
 I'll be doing these as I get a chance, but you should totally fork the project and implement these yourself, yo.
 
 * Find potentially problematic uses of load event when deviceReady is what is really needed.
-* [Issue #1](https://github.com/Trott/cordova-linter/issues/1): Flag techniques used to trigger deviceReady in the browser for testing if they should be removed from a production build. 
+* [Issue #1](https://github.com/Trott/cordova-linter/issues/1): Flag techniques used to trigger deviceReady in the browser for testing if they should be removed from a production build.
 * Detect CSS transitions that would benefit from hardware acceleration via the `translate3d` hack?
 * Detect use of click event handlers without FastClick loaded
-* Detect failure to load `cordova.js`
 * Detect loading of `phonegap.js` instead of `cordova.js`
 * Detect when an app isn't a single-page app? Or is that overkill? I mean, that's not really a lint thing, that's a whole app architecture thing.
 * What else?
