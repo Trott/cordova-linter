@@ -22,7 +22,6 @@ I'll be doing these as I get a chance, but you should totally fork the project a
 * Detect use of click event handlers without FastClick loaded
 * Detect failure to load `cordova.js`
 * Detect loading of `phonegap.js` instead of `cordova.js`
-* Detect protocol-less paths
 * Detect when an app isn't a single-page app? Or is that overkill? I mean, that's not really a lint thing, that's a whole app architecture thing.
 * What else?
 
