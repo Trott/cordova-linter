@@ -54,8 +54,20 @@ describe('$ cordova-linter [path]', function() {
         expect(myProcess.output).toMatch(/Protocol-less path in src or href attribute of script tag: \/\/example\.com\/jquery\.js/);
     });
 
-    it ('should exit with an error code', function () {
+    it ('should exit with an error code when linting a non-existent path', function () {
         var myProcess = shell.exec(bin + ' non-existent_path', { silent: true });
         expect(myProcess.code).not.toEqual(0);
+    });
+
+    it ('should report a missing cordova.js script tag', function () {
+        var projectPath = path.join('spec', 'fixture', 'project', 'Bad', 'www');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output.indexOf('Script tag loading cordova.js not found')).not.toEqual(-1);
+    });
+
+    it('should not report a missing cordova.js script tag if one is found', function() {
+        var projectPath = path.join('spec' + 'fixture', 'project', 'Baz', 'www');
+        var myProcess = shell.exec(bin + ' ' + projectPath, { silent: true });
+        expect(myProcess.output.indexOf('Script tag loading cordova.js not found')).toEqual(-1);
     });
 });
