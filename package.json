@@ -28,12 +28,14 @@
     "test": "jasmine-node --color spec"
   },
   "devDependencies": {
+    "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.1",
-    "jasmine-node": "~1.11.0",
-    "grunt-jasmine-node": "~0.1.0",
     "grunt-conventional-changelog": "~1.0.0",
+    "grunt-jasmine-node": "~0.1.0",
+    "jasmine-node": "~1.11.0",
+    "jshint": "^2.5.11",
+    "precommit-hook": "^1.0.7",
     "shelljs": "~0.2.6"
   },
   "keywords": [],
