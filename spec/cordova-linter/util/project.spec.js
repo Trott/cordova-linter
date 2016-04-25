@@ -17,7 +17,7 @@ describe('project', function() {
 
         describe('when index.html file does not exist', function() {
             it('should throw an error', function () {
-                expect(function () {project.readIndexHtml('.');}).toThrow(new Error("ENOENT, no such file or directory 'index.html'"));
+                expect(function () {project.readIndexHtml('.');}).toThrow();
             });
         });
 
